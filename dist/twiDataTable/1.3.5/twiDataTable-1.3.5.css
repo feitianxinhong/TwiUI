@@ -1,0 +1,148 @@
+﻿/**
+ * jQuery twiDataTable plugin css
+ * @author: feitianxinhong  http://xuzhihong1987.blog.163.com/
+ * @version 1.3.5
+ * @create date:2014-10-25
+ * @LastEditDate:2017-08-07
+ * @copyright (c) 2014 feitianxinhong/tyingsoft/twilight  http://www.tyingsoft.com
+ * @example Visit 
+ * @Require: bootstrap-3.2.0样式 
+ *
+ * ------------------------------------------------------------------
+ * 编号    版本号      作者              修改日期       CSS修改内容
+ * ------------------------------------------------------------------
+ *  1      1.0.0       feitianxinhong    2014-10-17     创建文件，表格样式：如twiSelected
+ *  2      2.0.0(分支) feitianxinhong    2014-10-17     无
+ *  3      1.1.0       feitianxinhong    2014-10-24     无
+ *  4      1.1.1       feitianxinhong    2014-10-25     在.twiTableContainer下的表格样式重写
+ *  5      1.2.0       feitianxinhong    2014-10-27     无
+ *  6      1.2.1       feitianxinhong    2015-01-04     无
+ *  7      1.2.2       feitianxinhong    2015-01-06     无
+ *  8      1.2.3       feitianxinhong    2015-01-08     增加了bbar及btnGroup的样式
+ *  9      1.2.4       feitianxinhong    2015-01-13     增加和修正样式，解决Toolbar、Bbar的顺序问题
+ *  10     1.2.5       feitianxinhong    2015-02-02     auto-hidden自动隐藏，从twibootstrap.css集成过来
+ *  11     1.2.6       feitianxinhong    2015-02-28     无
+ *  12     1.2.7       feitianxinhong    2015-03-05     无
+ *  13     1.2.8       feitianxinhong    2015-03-06     无
+ *  14     1.3.0       feitianxinhong    2015-03-10     添加TreeGrid相关样式
+ *  15     1.3.1       feitianxinhong    2015-03-13     无
+ *                     feitianxinhong    2015-03-20     无                  
+ *  16     1.3.2       feitianxinhong    2015-04-09     解决MainFrame的panel存在margin-bottom:20px的问题
+ *  17     1.3.3       feitianxinhong    2015-04-12     glyphIcon obar增加图标和文字间距。
+ *  18     1.3.4       feitianxinhong    2016-01-28     无
+ *  19     1.3.5       feitianxinhong    2017-08-07     无 
+ * ------------------------------------------------------------------
+ */
+
+/*解决高度问题【1.3.2+】 样式在Boostrap后面才能起到重写作用*/
+.twiDtMainFrame {
+   margin:0;
+}
+
+/*表格样式【1.0.0+】*/
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr
+ {
+   cursor:default;
+}
+
+.table > thead > tr > td.twiSelected,
+.table > tbody > tr > td.twiSelected,
+.table > tfoot > tr > td.twiSelected,
+.table > thead > tr > th.twiSelected,
+.table > tbody > tr > th.twiSelected,
+.table > tfoot > tr > th.twiSelected,
+.table > thead > tr.twiSelected > td,
+.table > tbody > tr.twiSelected > td,
+.table > tfoot > tr.twiSelected > td,
+.table > thead > tr.twiSelected > th,
+.table > tbody > tr.twiSelected > th,
+.table > tfoot > tr.twiSelected > th {
+  background-color: #dff0d8;
+}
+.table-hover > tbody > tr > td.twiSelected:hover,
+.table-hover > tbody > tr > th.twiSelected:hover,
+.table-hover > tbody > tr.twiSelected:hover > td,
+.table-hover > tbody > tr:hover > .twiSelected,
+.table-hover > tbody > tr.twiSelected:hover > th {
+  background-color: #d0e9c6;
+}
+
+/*自动隐藏，从twibootstrap.css集成过来【1.2.5+】*/
+.auto-hidden {
+        display :none;
+    }
+@media (min-width: 400px) {
+    .auto-hidden {
+        display:inline; /*display : inherit;*/ /*2016-03-03 16:55:34  xzh bootstrap-3.3.5 兼容问题*/
+    }
+}
+
+/*在.twiTableContainer下的表格样式重写【1.1.1+】*/
+.twiTableContainer {
+   overflow:auto;
+}
+.twiTableContainer .table {
+    margin-bottom: 0;
+}
+.twiTableContainer .table-bordered {
+  border: 0;
+}
+ .panel-body {
+    /*border-bottom:1px solid #ddd;*/ /*【1.2.3注释掉，换别的方式】  Code：01081353*/  
+    padding:5px; /*【1.2.3+】*/ /*padding:5px 15px;*/
+    background-color: #f9f9f9;
+}
+
+/*【1.2.3+】 tbarBottomBorder替代Code：01081353 样式*/
+.tbarBottomBorder {
+    border-bottom:1px solid #ddd;   
+}
+
+.bbarTopBorder {
+  border-top:1px solid #ddd;
+}
+
+/*解决btnGroup等使用Icon会折行问题【1.2.3+】 【1.2.4+ 增加限制】*/
+.tbarBottomBorder .btn-group > .btn, 
+.tbarBottomBorder .btn-group-vertical > .btn,
+.bbarTopBorder .btn-group > .btn, 
+.bbarTopBorder .btn-group-vertical > .btn  {
+     float:none;
+}
+
+/*解决btnGroup等会影响顺序问题【1.2.4+】*/
+.tbarBottomBorder .btn-toolbar .btn-group, 
+.tbarBottomBorder .btn-toolbar .input-group, 
+.bbarTopBorder .btn-toolbar .btn-group, 
+.bbarTopBorder .btn-toolbar .input-group {
+    float: none;
+}
+
+/*分页弹出式选择页数【1.2.5+】*/
+.twiPagingSlt {
+    height:165px;
+    overflow:auto;
+}
+/*每页条数*/
+.twiPageSize {
+    max-width:55px;
+    padding: 5px 3px;
+}
+
+/*单元格内容不换行【1.2.5+】*/
+.twiTableContainer>.table > thead > tr > th>div,
+.twiTableContainer>.table > tbody > tr > td>div {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+/*TreeGrid样式 【1.3.0+】*/
+.twiTreeGridIcon {
+    padding-right:5px;
+}
+/*glyphIcon obar增加图标和文字间距。 【1.3.3+】*/
+.twiGlyphText {
+    padding-left: 2px;
+}

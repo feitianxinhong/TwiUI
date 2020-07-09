@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>TwiDataTable DOM结构</title>
+</head>
+<body>
+
+--------------------------------------------------------
+<br />
+
+TwiDataTable DOM结构 V1.2.5 
+
+
+<div id="TwiDtPanel979" class="panel panel-default ">
+    <!-- 标题 -->
+    <div id="TwiDtTitle338" class="panel-heading">这里是标题</div>
+
+    <!-- Toolbar工具栏 -->
+    <div class="panel-body tbarBottomBorder">
+        <div class="btn-toolbar" twifor="tbar">
+            <button class="btn btn-default  btn-sm" type="button" id="TwiTbarItm9941">
+                <span class="glyphicon glyphicon-trash" style="color: red;"></span>
+                <span class="auto-hidden">删除</span>
+            </button>
+            <button class="btn btn-default  btn-sm" type="button" id="TwiTbarItm2620">
+                <span class="glyphicon glyphicon-plus" style="color: rgb(71, 143, 202);"></span>
+                <span class="auto-hidden">新增</span>
+            </button>
+        </div>
+    </div>
+
+   <!-- 表格 -->
+    <div class="twiTableContainer" twifor="tableContainer">
+        <table class="table table-hover table-bordered table-striped" id="TwiDataTable8515">
+            <!-- 表头 -->
+            <thead>
+                <tr>
+                    <th style="text-align:center;width:20px;"></th>
+                    <th style="text-align:center;width:20px;"><input type="checkbox" twidtchktype="all"></th>
+                    <th style="width:80px;">编号
+                        <span class="glyphicon glyphicon-arrow-up hidden"></span>
+                        <span class="glyphicon glyphicon-arrow-down hidden"></span>
+                    </th>
+                    <th>名称
+                        <span class="glyphicon glyphicon-arrow-up hidden"></span>
+                        <span class="glyphicon glyphicon-arrow-down hidden"></span>
+                    </th>
+                    <th>显示字段
+                        <span class="glyphicon glyphicon-arrow-up hidden"></span>
+                        <span class="glyphicon glyphicon-arrow-down hidden"></span>
+                    </th>
+                    <th>是否显示
+                        <span class="glyphicon glyphicon-arrow-up hidden"></span>
+                        <span class="glyphicon glyphicon-arrow-down hidden"></span>
+                    </th>
+                </tr>
+            </thead>
+            <!-- 行数据 -->
+            <tbody>
+                <tr rowindex="0">
+                    <td style="text-align:center;">1</td>
+                    <td><input type="checkbox" twidtchktype="row"></td>
+                    <td configcolindex="0">SysPark</td>
+                    <td configcolindex="1">景点权限</td>
+                    <td configcolindex="2">ParkName(Fn)</td>
+                    <td configcolindex="3">undefined</td>
+                </tr>
+                <tr rowindex="1">
+                    <td style="text-align:center;">2</td>
+                    <td><input type="checkbox" twidtchktype="row"></td>
+                    <td configcolindex="0">Department1</td>
+                    <td configcolindex="1">部门权限1</td>
+                    <td configcolindex="2">DeptName</td>
+                    <td configcolindex="3"><span style="color:green;">√</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bbar工具栏 -->
+    <div class="panel-body bbarTopBorder">
+        <div class="btn-toolbar" twifor="bbar">
+            <!-- bbar按钮组 -->
+            <div class="btn-group btn-group-sm" id="TwiBbarGroupItm2644">
+                <button class="btn btn-default  btn-sm" type="button" id="TwiBbarItm2239">
+                    <span class="glyphicon glyphicon-hand-up"></span>
+                    <span class="auto-hidden">至顶部</span>
+                </button>
+                <button class="btn btn-default  btn-sm" type="button" id="TwiBbarItm3995">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                    <span class="auto-hidden">上移</span>
+                </button>
+                <button class="btn btn-default  btn-sm" type="button" id="TwiBbarItm5215">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                    <span class="auto-hidden">下移</span>
+                </button>
+                <button class="btn btn-default  btn-sm" type="button" id="TwiBbarItm8073">
+                    <span class="glyphicon glyphicon-hand-down"></span>
+                    <span class="auto-hidden">至底部</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+--------------------------------------------------------
+
+
+</body>
+</html>

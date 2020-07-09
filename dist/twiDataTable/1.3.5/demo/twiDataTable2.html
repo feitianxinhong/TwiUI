@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <title>BootStrap样式表格</title>    
+    <link href="/Framework/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../twiDataTable-1.3.5.css" rel="stylesheet" />
+    <script src="/Framework/jquery/jquery-1.11.1.min.js"></script>
+    <script src="/Framework/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="../jquery.TwiDataTable-1.3.5.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            var twiDataTable = new Twi.DataTable({
+                renderTo: '#grid',
+                checkBoxCol: true,
+                multiSelect: true,
+                paging:true,
+                //idField:'FCODE',
+                striped:false,
+                //width:400,
+                //height:500,
+                title:'这里是标题',
+                skin: 'danger',
+                sortFn: function (args) {
+                    alert(args.orderFields);
+                },
+                //rownumberer:false,
+                showMoveRowGroup: true,
+                quickQuery: {
+                    dock:'bbar',
+                    items: [{
+                        dataType:16,
+                        children: [{
+                            text: 'feitianxinhong',
+                            fieldName: 'feitianxinhong'
+                        }, {
+                            text: 'cmd',
+                            fieldName: 'cmd'
+                        }, {
+                            text: 'zhaojw',
+                            fieldName: 'zjw'
+                        }]
+                    }, {
+                        text: '按名称',
+                        fieldName: 'FNAME'
+                    }, {
+                        text: '按编号',
+                        fieldName: 'FCODE'
+                    }],
+                    handler: function (args) {
+                        alert(args.data.FCODE);
+                    }
+                },                
+                bbar:[{
+                    xtype: 'btnDdm',
+                    text:'单按钮上弹式菜单',
+                    children: ["菜单1", {
+                        text: "菜单2(子)",
+                        handler: function (args) {
+                            alert(args.text + ":子节点配置事件");
+                        }
+                    }, "菜单3"],
+                    handler: function (args) {
+                        alert(args.text);
+                    }
+                }, {
+                    xtype: 'btnGroup',
+                    iconCls: 'glyphicon-pencil',
+                    children: ["按钮组1", {
+                        text: "按钮组2（子）",
+                        iconCls: 'glyphicon-trash',
+                        handler: function (args) {
+                            alert(args.text + ":子节点配置事件");
+                        }
+                    }],
+                    handler: function (args) {
+                        alert(args.text+":父节点配置事件");
+                    }
+                }],
+
+                
+                toolbar: [{
+                    text: '新增',
+                    iconCls: 'glyphicon-plus',
+                    iconColor: '#478fca',
+                    handler: function () {
+                        alert('新增');
+                    }
+                }, {
+                    text: '编辑',
+                    iconCls: 'glyphicon-pencil',
+                    iconColor: '#69aa46',
+                    handler: function () {
+                        twiDataTable.editData({
+                            FCODE: 'newCode',
+                            FTextField: 'newFTextField'
+                        });
+                    }
+                }, {
+                    text: '删除',
+                    iconCls: 'glyphicon-trash',
+                    //position: 'first',
+                    iconColor: 'red'
+                }, {
+                    text: '刷新',
+                    iconCls: 'glyphicon-refresh',
+                    //skin: 'danger',
+                    hander: function () {
+                        twiDataTable.refresh();
+                    }
+                }/*, {
+                    xtype: 'btnGroup',
+                    handler: function (args) {
+                        if (args.text == "至顶部") {
+                            twiDataTable.rowUpToFirst();
+                        }
+                    },
+                    children: [{
+                        text: '至顶部',
+                        iconCls: 'glyphicon-hand-up',
+                        //handler: function () {
+                        //    twiDataTable.rowUpToFirst();
+                        //}
+                    }, {
+                        text: '上移',
+                        iconCls: 'glyphicon-arrow-up',
+                        handler: function () {
+                            twiDataTable.rowUp(function () {
+                                alert("我上移动了");
+                            });
+                        }
+                    }, {
+                        text: '下移',
+                        iconCls: 'glyphicon-arrow-down',
+                        handler: function (args) {
+                            alert(args.text);
+                            twiDataTable.rowDown();
+                        }
+                    }, {
+                        text: '至底部',
+                        iconCls: 'glyphicon-hand-down',                        
+                        handler: function () {
+                            twiDataTable.rowDownToLast();
+                        }
+                    }]
+                }, {
+                    xtype: 'btnDdm',
+                    text:'单按钮下拉菜单',
+                    children: ["菜单1", {
+                        text: "菜单2(子)",
+                        handler: function (args) {
+                            alert(args.text + ":子节点配置事件");
+                        }
+                    }, "菜单3"],
+                    handler: function (args) {
+                        alert(args.text);
+                    }
+                }, {
+                    xtype: 'btnGroup',
+                    iconCls: 'glyphicon-pencil',
+                    children: ["按钮组1", {
+                        text: "按钮组2（子）",
+                        iconCls: 'glyphicon-trash',
+                        handler: function (args) {
+                            alert(args.text + ":子节点配置事件");
+                        }
+                    }],
+                    handler: function (args) {
+                        alert(args.text+":父节点配置事件");
+                    }
+                }, {
+                    text: '提交',
+                    skin:'danger'
+                }*/],
+                treeGrid:true,
+                //treeGrid: {
+                //    model:'plus'
+                //},
+                columns: [{
+                    text: '编号',
+                    fieldName: 'FCODE',
+                    width: 150
+                }, {
+                    text: '名称',
+                    fieldName: 'FNAME',
+                    editable: {
+                        isValidate: function (val) {
+                            return val == "1";
+                        },
+                        failed: function () {
+                            alert("输入1才行");
+                        },
+                        success: function (args) {
+                            alert(args.colData);
+                        }
+                    },
+                    cellclick: function (args) {
+                        alert(args.colData);
+                    }
+                }, {
+                    text: '显示字段',
+                    fieldName: 'FTextField',
+                    renderer: function (data, rowData) {
+                        if (rowData.FCODE == '001') {
+                            return "FCODE=001"
+                        }
+                        else if (data == "ParkName") {
+                            return "ParkName(Fn)";
+                        }
+                        return data;
+                    }//,
+                    //hidden: true
+                }, {
+                    text: '是否显示',
+                    fieldName:'FIsShow',
+                    format: 'bool',
+                    editable: true,
+                    cellclick: function (args) {
+                        alert(args.rowIndex);
+                    }
+                }, {
+                    text: 'ID',
+                    fieldName:'FID'
+                }, {
+                    text: '父节点ID',
+                    fieldName: 'FPARENTID'
+                }]
+            });
+            var data = [{
+                FID:'1',
+                FPARENTID:'',
+                FCODE: '001',
+                FNAME: '景点权限',
+                FTextField: 'ParkName'
+            }, {
+                FID: '2',
+                FPARENTID: '1',
+                FCODE: 'Department1',
+                FNAME: '部门权限1',
+                FTextField: 'DeptName',
+                FIsShow:"1"
+            }, {
+                FID: '3',
+                FPARENTID: '1',
+                FCODE: 'Department2',
+                FNAME: '部门权限2',
+                FTextField: 'DeptName',
+                FIsShow: "1"
+            }, {
+                FID: '4',
+                FPARENTID: '5',
+                FCODE: 'Department3',
+                FNAME: '部门权限3',
+                FTextField: 'DeptName',
+                FIsShow: "1"
+            }, {
+                FID: '5',
+                FPARENTID: '',
+                FCODE: 'SysPark2',
+                FNAME: '景点权限2',
+                FTextField: 'ParkName',
+                FIsShow: "0"
+            }, {
+                FID: '6',
+                FPARENTID: '5',
+                FCODE: 'Department3',
+                FNAME: '部门权限3',
+                FTextField: 'DeptName',
+                FIsShow: "2"
+            }, {
+                FID: '7',
+                FPARENTID: '1',
+                FCODE: 'SysPark4',
+                FNAME: '景点权限4',
+                FTextField: 'ParkName',
+                FIsShow: true
+            }, {
+                FID: '8',
+                FPARENTID: '',
+                FCODE: 'Department5',
+                FNAME: '部门权限5',
+                FTextField: 'DeptName',
+                FIsShow: false
+            }, {
+                FID: '9',
+                FPARENTID: '',
+                FCODE: 'SysPark6',
+                FNAME: '景点权限',
+                FTextField: 'ParkName'
+            }, {
+                FID: '10',
+                FPARENTID: '3',
+                FCODE: 'Department',
+                FNAME: '部门权限',
+                FTextField: 'DeptName'
+            }, {
+                FID: '11',
+                FPARENTID: '3',
+                FCODE: 'SysPark',
+                FNAME: '景点权限',
+                FTextField: 'ParkName'
+            }, {
+                FID: '12',
+                FPARENTID: '0',
+                FCODE: 'childRoot',
+                FNAME: '父节点不在',
+                FTextField: 'childRoot'
+            }/*, {
+                FCODE: 'Department',
+                FNAME: '部门权限',
+                FTextField: 'DeptName'
+            }, {
+                FCODE: 'SysPark',
+                FNAME: '景点权限',
+                FTextField: 'ParkName'
+            }, {
+                FCODE: 'Department',
+                FNAME: '部门权限',
+                FTextField: 'DeptName'
+            }, {
+                FCODE: 'SysPark',
+                FNAME: '景点权限',
+                FTextField: 'ParkName'
+            }, {
+                FCODE: 'Department',
+                FNAME: '部门权限',
+                FTextField: 'DeptName'
+            }*/];
+            twiDataTable.loadData(data);
+            twiDataTable.on('rowclick', function (args) {
+                //alert(args.rowIndex);
+                //twiDataTable.removeListener('rowclick');
+            });
+            twiDataTable.checkedByIndex(1);
+            twiDataTable.checkedByIndex(3);
+            //twiDataTable.checkedByIndex(4);
+            //twiDataTable.checkedById("Department");
+            //twiDataTable.checkedByKeyValue('FCODE', 'Department');
+            var data2 = [{
+                FCODE: 'SysPark',
+                FNAME: '景点权限2',
+                FTextField: 'ParkName'
+            }, {
+                FCODE: 'Department',
+                FNAME: '部门权限2',
+                FTextField: 'DeptName'
+            }];
+            //twiDataTable.loadData(data2);
+
+            //twiDataTable.resize({
+            //    //width: 800,
+            //    height:260
+            //});
+
+            $('#twiVersion').html(twiDataTable.VERSION);
+        });
+        
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Twi.DataTable V<span id="twiVersion">...</span>版本</h3>
+        <div class="row">
+            <div class="col-sm-12">
+                <p>这里是内容1</p>
+                <div id="grid"></div>
+                <p>这里是内容2</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
