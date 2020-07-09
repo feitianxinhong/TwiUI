@@ -1,0 +1,1408 @@
+/**
+ * twiUI css for Bootstrap
+ * @Author：feitianxinhong http://feitianxinhong.com  
+ * @Version：1.0.2
+ * @CreateDate：2014-10-25
+ * @Example: Visit http://feitianxinhong.com 
+ * @Copyright ©2010-2015 Tyingsoft 踏影科技 之 Twilight/Twifly开源系列. 转载请保留本行注明.   
+ * @License：Twi Framework of Tyingsoft is licensed under the MIT license.  
+ * @Description：补充Bootstrap样式
+ * @Require: bootstrap-3.2.0样式 
+ *
+ * ------------------------------------------------------------------
+ * 编号    版本号      作者              修改日期        修改内容
+ * ------------------------------------------------------------------
+ *  1      1.0.0       feitianxinhong    2014-10-25      form表单重写样式、auto-hidden
+ *  2      1.0.1       feitianxinhong    2015-02-28      .twiColLayOut
+ *  3      1.0.2       feitianxinhong    2015-03-02      twiUI for Bootstrap 用的的通用样式集成到这一起
+ *
+ * ------------------------------------------------------------------
+ */
+
+
+/* 1.0.0新增样式*/
+
+/*
+ * 新增编辑表单使用的样式
+ */
+.form-group {
+    margin-bottom:5px;   /*重写bootstrap样式，因弹出框高度限制，缩写间距*/
+}
+.form-group label{
+    text-align:right;
+}
+.form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;   /*iframe解析出问题，故抄一遍bootstrap的样式来覆盖使其生效*/
+}
+
+/*
+ * Code snippets
+ *
+ * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
+ */
+
+.highlight {
+  /*display: none;*/ /* hidden by default, until >480px */
+  padding: 9px 14px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
+}
+.highlight pre {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  white-space: nowrap;
+}
+.highlight pre code {
+  font-size: inherit;
+  color: #333; /* Effectively the base text color */
+}
+.highlight pre .lineno {
+  display: inline-block;
+  width: 22px;
+  padding-right: 5px;
+  margin-right: 10px;
+  text-align: right;
+  color: #bebec5;
+}
+
+/* Show code snippets when we have the space */
+/*@media (min-width: 481px) {
+  .highlight {
+    display: block;
+  }
+}*/
+
+
+/*图标颜色值*/
+.icon-red {
+    color: #dd5a43 !important;
+}
+.icon-green {
+    color: #69aa46 !important;
+}
+.icon-blue {
+    color: #478fca !important;
+}
+.icon-purple {
+    color: #8e44ad !important; 
+}
+
+.auto-hidden {
+        display :none;
+    }
+@media (min-width: 400px) {
+    .auto-hidden {
+        display : inherit;
+    }
+}
+
+/* 1.0.1新增样式*/
+
+.twiColLayOut {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* 1.0.2 新增样式：统一样式*/
+
+/*自动隐藏*/
+.auto-hidden {
+        display :none;
+    }
+@media (min-width: 400px) {
+    .auto-hidden {
+        display : inherit;
+    }
+}
+
+.panel-body {
+    padding:5px; /*padding:5px 15px;*/
+    background-color: #f9f9f9;
+}
+
+.tbarBottomBorder {
+    border-bottom:1px solid #ddd;   
+}
+
+.bbarTopBorder {
+  border-top:1px solid #ddd;
+}
+
+/*解决btnGroup等使用Icon会折行问题*/
+.tbarBottomBorder .btn-group > .btn, 
+.tbarBottomBorder .btn-group-vertical > .btn,
+.bbarTopBorder .btn-group > .btn, 
+.bbarTopBorder .btn-group-vertical > .btn  {
+     float:none;
+}
+
+/*解决btnGroup等会影响顺序问题【1.2.4+】*/
+.tbarBottomBorder .btn-toolbar .btn-group, 
+.tbarBottomBorder .btn-toolbar .input-group, 
+.bbarTopBorder .btn-toolbar .btn-group, 
+.bbarTopBorder .btn-toolbar .input-group {
+    float: none;
+}
+
+.twiConfirmContainer {
+}
+
+.twiConfirmContainer a {
+  text-decoration: none;    
+}
+
+.twiConfirm {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);    
+    outline: 0 none;
+    position: fixed;
+    top: 10%;
+    left:50%;
+    margin-left:-200px;
+    width:400px;
+    z-index: 1050;    
+}
+
+.twiConfirmBody {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    position: relative;
+}
+
+.twiConfirmFooter {
+    background-color: #f5f5f5;
+    border-radius: 0 0 6px 6px;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 1px 0 #fff inset;
+    margin-bottom: 0;
+    padding: 14px 15px 15px;
+    text-align: right;
+}
+
+.twiConfirmBackdrop {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.twiConfirmBtn {
+    display: inline-block;
+    padding: 4px 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+
+.twiConfirmBtn:hover{
+    color: #333;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position .1s linear;
+    -moz-transition: background-position .1s linear;
+    -o-transition: background-position .1s linear;
+    transition: background-position .1s linear;
+}
+
+.twiConfirmBtnOK {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #da4f49;
+    background-image: -moz-linear-gradient(top,#ee5f5b,#bd362f);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#ee5f5b),to(#bd362f));
+    background-image: -webkit-linear-gradient(top,#ee5f5b,#bd362f);
+    background-image: -o-linear-gradient(top,#ee5f5b,#bd362f);
+    background-image: linear-gradient(to bottom,#ee5f5b,#bd362f);
+    background-repeat: repeat-x;
+    border-color: #bd362f #bd362f #802420;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b',endColorstr='#ffbd362f',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    margin-right:10px;
+}
+
+.twiConfirmBtnOK:hover{
+    color: #fff;
+    background-color: #bd362f;
+}
+
+@media (max-width: 401px) {
+    .twiConfirm {
+       width:200px;
+       margin-left:-100px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+    .twiConfirm {
+       width:360px;
+       margin-left:-180px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+/**
+ * jQuery twiDataTable plugin css
+ * @author: feitianxinhong  http://feitianxinhong.com
+ * @version 1.3.2
+ * @create date:2014-10-25
+ * @copyright (c) 2014 feitianxinhong/tyingsoft/twilight  http://www.tyingsoft.com
+ * @example Visit 
+ * @Require: bootstrap-3.2.0样式 
+ *
+ * ------------------------------------------------------------------
+ * 编号    版本号      作者              修改日期       CSS修改内容
+ * ------------------------------------------------------------------
+ *  1      1.0.0       feitianxinhong    2014-10-17     创建文件，表格样式：如twiSelected
+ *  2      2.0.0(分支) feitianxinhong    2014-10-17     无
+ *  3      1.1.0       feitianxinhong    2014-10-24     无
+ *  4      1.1.1       feitianxinhong    2014-10-25     在.twiTableContainer下的表格样式重写
+ *  5      1.2.0       feitianxinhong    2014-10-27     无
+ *  6      1.2.1       feitianxinhong    2015-01-04     无
+ *  7      1.2.2       feitianxinhong    2015-01-06     无
+ *  8      1.2.3       feitianxinhong    2015-01-08     增加了bbar及btnGroup的样式
+ *  9      1.2.4       feitianxinhong    2015-01-13     增加和修正样式，解决Toolbar、Bbar的顺序问题
+ *  10     1.2.5       feitianxinhong    2015-02-02     auto-hidden自动隐藏，从twibootstrap.css集成过来
+ *  11     1.2.6       feitianxinhong    2015-02-28     无
+ *  12     1.2.7       feitianxinhong    2015-03-05     无
+ *  13     1.2.8       feitianxinhong    2015-03-06     无
+ *  14     1.3.0       feitianxinhong    2015-03-10     添加TreeGrid相关样式
+ *  15     1.3.1       feitianxinhong    2015-03-13     无
+ *                     feitianxinhong    2015-03-20     无                  
+ *  16     1.3.2       feitianxinhong    2015-04-09     解决MainFrame的panel存在margin-bottom:20px的问题
+ *  17     1.3.3       feitianxinhong    2015-04-12     glyphIcon obar增加图标和文字间距。 
+ * ------------------------------------------------------------------
+ */
+
+/*解决高度问题【1.3.2+】 样式在Boostrap后面才能起到重写作用*/
+.twiDtMainFrame {
+   margin:0;
+}
+
+/*表格样式【1.0.0+】*/
+.table > thead > tr,
+.table > tbody > tr,
+.table > tfoot > tr
+ {
+   cursor:default;
+}
+
+.table > thead > tr > td.twiSelected,
+.table > tbody > tr > td.twiSelected,
+.table > tfoot > tr > td.twiSelected,
+.table > thead > tr > th.twiSelected,
+.table > tbody > tr > th.twiSelected,
+.table > tfoot > tr > th.twiSelected,
+.table > thead > tr.twiSelected > td,
+.table > tbody > tr.twiSelected > td,
+.table > tfoot > tr.twiSelected > td,
+.table > thead > tr.twiSelected > th,
+.table > tbody > tr.twiSelected > th,
+.table > tfoot > tr.twiSelected > th {
+  background-color: #dff0d8;
+}
+.table-hover > tbody > tr > td.twiSelected:hover,
+.table-hover > tbody > tr > th.twiSelected:hover,
+.table-hover > tbody > tr.twiSelected:hover > td,
+.table-hover > tbody > tr:hover > .twiSelected,
+.table-hover > tbody > tr.twiSelected:hover > th {
+  background-color: #d0e9c6;
+}
+
+/*自动隐藏，从twibootstrap.css集成过来【1.2.5+】*/
+.auto-hidden {
+        display :none;
+    }
+@media (min-width: 400px) {
+    .auto-hidden {
+        display:inline; /*display : inherit;*/ /*2016-03-03 16:55:34  xzh bootstrap-3.3.5 兼容问题*/
+    }
+}
+
+/*在.twiTableContainer下的表格样式重写【1.1.1+】*/
+.twiTableContainer {
+   overflow:auto;
+}
+.twiTableContainer .table {
+    margin-bottom: 0;
+}
+.twiTableContainer .table-bordered {
+  border: 0;
+}
+ .panel-body {
+    /*border-bottom:1px solid #ddd;*/ /*【1.2.3注释掉，换别的方式】  Code：01081353*/  
+    padding:5px; /*【1.2.3+】*/ /*padding:5px 15px;*/
+    background-color: #f9f9f9;
+}
+
+/*【1.2.3+】 tbarBottomBorder替代Code：01081353 样式*/
+.tbarBottomBorder {
+    border-bottom:1px solid #ddd;   
+}
+
+.bbarTopBorder {
+  border-top:1px solid #ddd;
+}
+
+/*解决btnGroup等使用Icon会折行问题【1.2.3+】 【1.2.4+ 增加限制】*/
+.tbarBottomBorder .btn-group > .btn, 
+.tbarBottomBorder .btn-group-vertical > .btn,
+.bbarTopBorder .btn-group > .btn, 
+.bbarTopBorder .btn-group-vertical > .btn  {
+     float:none;
+}
+
+/*解决btnGroup等会影响顺序问题【1.2.4+】*/
+.tbarBottomBorder .btn-toolbar .btn-group, 
+.tbarBottomBorder .btn-toolbar .input-group, 
+.bbarTopBorder .btn-toolbar .btn-group, 
+.bbarTopBorder .btn-toolbar .input-group {
+    float: none;
+}
+
+/*分页弹出式选择页数【1.2.5+】*/
+.twiPagingSlt {
+    height:165px;
+    overflow:auto;
+}
+/*每页条数*/
+.twiPageSize {
+    max-width:55px;
+    padding: 5px 3px;
+}
+
+/*单元格内容不换行【1.2.5+】*/
+.twiTableContainer>.table > thead > tr > th>div,
+.twiTableContainer>.table > tbody > tr > td>div {
+    white-space: nowrap;
+    overflow:hidden;
+}
+
+/*TreeGrid样式 【1.3.0+】*/
+.twiTreeGridIcon {
+    padding-right:5px;
+}
+/*glyphIcon obar增加图标和文字间距。 【1.3.3+】*/
+.twiGlyphText {
+    padding-left: 2px;
+}
+
+
+.twiDialogBg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+}
+.twiDialogCnt
+{
+    position:absolute;
+    margin:0 auto;
+    border: solid 2px #000;
+    width:200px;
+    height:26px;    
+    line-height:26px;
+    background: white url("images/loading.gif") no-repeat 3px center;
+    padding:3px;
+    padding-left:30px;
+    top:50%;
+    left:50%;
+    margin-top:-13px;
+    margin-left:-100px;
+}
+.twiDialogTitle {
+
+}
+
+.twiDropdown {
+  position: relative;
+}
+.twiDropdownToggle:hover {
+    cursor:pointer;
+}
+.twiDropdownMenu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 180px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #F9F9F9;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  overflow:auto;
+  max-height:500px;
+}
+
+.twiDropdownMenu > li > a {
+  display: block;
+  padding: 3px 30px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.8;
+  color: #333333;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.twiDropdownMenu > li > a:hover,
+.twiDropdownMenu > li > a:focus {
+  text-decoration: none;
+  background-color: #F4F4F4;
+  cursor:pointer;
+}
+
+.twiDropdownMenuSeparator {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+/**
+ * jQuery TwiLoadingMask plugin
+ * @Author：feitianxinhong http://feitianxinhong.com  
+ * @Version：1.1.0
+ * @CreateDate：2015-03-27
+ * @Example: Visit http://feitianxinhong.com 
+ * @Copyright ©2010-2015 Tyingsoft 踏影科技 之 Twilight/Twifly开源系列. 转载请保留本行注明.   
+ * @License：Twi Framework of Tyingsoft is licensed under the MIT license.  
+ * @Description：基于jquery+Bootstrap的窗体控件
+ * @Require:  
+ *
+ * ------------------------------------------------------------------
+ * 编号    版本号      作者              修改日期         修改内容
+ * ------------------------------------------------------------------
+ *  1      1.0.0      feitianxinhong    2013-08-20      创建文件
+ *  2      1.0.1      feitianxinhong    2014-05-18      大字体版
+ *  3      1.1.0      feitianxinhong    2015-03-27      增加响应，去掉了图片，兼容Twi.Skin概念主题样式
+ * ------------------------------------------------------------------
+ */
+.twiLoadingMask {
+}
+.twiLoadingMask .twiLoadingMaskBg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #8e44ad;
+    filter: alpha(opacity=10);
+    -moz-opacity: 0.1;
+    -khtml-opacity: 0.1;
+    opacity: 0.1;
+    z-index:99999;
+}
+.twiLoadingMask .twiLoadingMaskCnt
+{
+    position:absolute;
+    margin:0 auto;
+    border: solid 2px #8E44AD;
+    width:300px;
+    height:50px; 
+    font-family:'Microsoft YaHei';
+    top:50%;
+    left:50%;
+    margin-top:-25px;
+    margin-left:-150px;
+    z-index:100000;
+}
+
+
+.twiLoadingMask .twiLoadingMaskTop {
+    height:50px;
+    width:100%;
+    /*background-color: #9B59B6;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;*/    
+}
+.twiLoadingMask .twiLoadingMaskMid {
+    background-color: #8e44ad;
+    height: 2px;
+    width: 100%;
+    margin-top:-12px;
+}
+.twiLoadingMask .twiLoadingMaskBtm {
+    background-color: #8e44ad;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 30px 30px;
+    height: 10px;
+    width: 0;
+}
+
+.twiLoadingMask .twiLoadingMaskMsg {
+   font-size:1.6em;
+   line-height: 36px;
+   color:#666;
+   padding-left:10px;
+   position:relative;
+   top:-50px;
+}
+
+
+
+@media (max-width: 500px) {
+    .twiLoadingMask .twiLoadingMaskCnt
+    {
+        width:180px;
+        margin-left:-90px;
+    }
+    .twiLoadingMask .twiLoadingMaskMsg {
+       font-size:1.2em;
+    }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+    .twiLoadingMask .twiLoadingMaskCnt
+    {
+        width:240px;
+        margin-left:-120px;
+    }
+    .twiLoadingMask .twiLoadingMaskMsg {
+       font-size:1.4em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .twiLoadingMask .twiLoadingMaskCnt
+    {
+        width:260px;
+        margin-left:-130px;
+    }
+    .twiLoadingMask .twiLoadingMaskMsg {
+       font-size:1.5em;
+    }
+}
+
+
+
+/**
+  *  twiModalWindow CSS 1.1.0
+  *  1.1.0:集成了TwiSkin八大未来主题
+  */
+.twi-md-btn {
+	border: none;
+	padding: 0.6em 1.2em;	
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 1em;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+}
+
+/**
+  *TwiSkin颜色搭配
+  */
+
+/*1、turquoise:绿松石、土耳其石      #16A085   #1ABC9C*/
+.twi-md-btn-turquoise{
+    background: #16A085;
+}
+.twi-md-bg-turquoise{
+	background: #1ABC9C;
+}
+.twi-md-btn-turquoise:hover{
+	background: #108770;
+}
+.twi-md-overlay-turquoise{
+    background: rgba(26,188,156,0.8);
+}
+/*2、sunorange:向日橙、土豪金        #F39C12   #F1C40F*/
+.twi-md-btn-sunorange{
+    background: #F39C12;
+}
+.twi-md-bg-sunorange{
+	background: #F1C40F;
+}
+.twi-md-btn-sunorange:hover{
+	background: #dd8d0f;
+}
+.twi-md-overlay-sunorange{
+    background: rgba(241,196,15,0.8);
+}
+/*3、dreamblue:梦之蓝、海之蓝   #2980B9   #3498DB*/
+.twi-md-btn-blue,
+.twi-md-btn-dreamblue{
+    background: #2980B9;
+}
+.twi-md-bg-blue,
+.twi-md-bg-dreamblue {
+    background: #3498DB;
+} 
+.twi-md-btn-blue:hover,
+.twi-md-btn-dream:hover {
+	background: #216b9c;
+}
+.twi-md-overlay-blue,
+.twi-md-overlay-dreamblue {
+    background: rgba(52,152,219,0.8); 
+}
+/*4、amethyst:紫水晶                #8E44AD   #9B59B6*/
+.twi-md-btn-amethyst{
+    background: #8E44AD;
+}
+.twi-md-bg-amethyst{
+	background: #9B59B6;
+}
+.twi-md-btn-amethyst:hover{
+	background: #7b329a;
+}
+.twi-md-overlay-amethyst{
+    background: rgba(155,89,182,0.8);
+}
+/*5、emerland:祖母绿、绿宝石         #27AE60   #2ECC71*/
+.twi-md-btn-emerland{
+    background: #27AE60;
+}
+.twi-md-bg-emerland{
+	background: #2ECC71;
+}
+.twi-md-btn-emerland:hover{
+	background: #1c9750;
+}
+.twi-md-overlay-emerland{
+    background: rgba(46,204,113,0.8);
+}
+/*6、rainright:黑雨夜               #2C3E50   #34495E*/
+.twi-md-btn-rainright{
+    background: #2C3E50;
+}
+.twi-md-bg-rainright{
+	background: #34495E;
+}
+.twi-md-btn-rainright:hover{
+	background: #22303f;
+}
+.twi-md-overlay-rainright{
+    background: rgba(52,73,94,0.8);
+}
+/*7、alizarin: 茜素红   #C0392B   #E74C3C */
+.twi-md-btn-red,
+.twi-md-btn-alizarin{
+    background: #c0392b;
+}
+.twi-md-bg-red,
+.twi-md-bg-alizarin {
+	background: #e74c3c;
+}
+.twi-md-btn-red:hover,
+.twi-md-btn-alizarin:hover{
+	background: #A5281B;
+}
+.twi-md-overlay-red,
+.twi-md-overlay-alizarin {
+    background: rgba(231,76,60,0.8);
+}
+/*8、brown:古韵棕                   #D35400   #E67E22*/
+.twi-md-btn-brown{
+    background: #D35400;
+}
+.twi-md-bg-brown{
+	background: #E67E22;
+}
+.twi-md-btn-brown:hover{
+	background: #bb4e07;
+}
+.twi-md-overlay-brown{
+    background: rgba(230,126,34,0.8);
+}
+
+
+
+.twi-md-modal {
+    font-family: 'Microsoft YaHei';
+	color: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.twi-md-show {
+	visibility: visible;
+}
+
+.twi-md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	/*background: rgba(143,27,15,0.8);*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+
+
+.twi-md-show ~ .twi-md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.twi-md-content {
+	color: #fff;
+	/*background: #3498db;*/
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.twi-md-content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+.twi-md-content > div {
+    font-size: 1.15em;
+    font-weight: 300;
+    margin: 0;
+    padding: 15px 40px 30px;
+}
+
+.twi-md-content button {
+    display: block;
+    font-size: 0.8em;
+    margin: 0 auto;
+}
+/* Individual modal styles with animations/transitions */
+
+/* Effect 1: Fade in and scale up */
+.twi-md-effect-1 .twi-md-content {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.twi-md-show.twi-md-effect-1 .twi-md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+
+/* Effect 2: Slide from the right */
+.twi-md-effect-2 .twi-md-content {
+	-webkit-transform: translateX(20%);
+	-moz-transform: translateX(20%);
+	-ms-transform: translateX(20%);
+	transform: translateX(20%);
+	opacity: 0;
+	-webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	-moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.twi-md-show.twi-md-effect-2 .twi-md-content {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+	opacity: 1;
+}
+
+/* Effect 3: Slide from the bottom */
+.twi-md-effect-3 .twi-md-content {
+	-webkit-transform: translateY(20%);
+	-moz-transform: translateY(20%);
+	-ms-transform: translateY(20%);
+	transform: translateY(20%);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.twi-md-show.twi-md-effect-3 .twi-md-content {
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* Effect 4: Newspaper */
+.twi-md-effect-4 .twi-md-content {
+	-webkit-transform: scale(0) rotate(720deg);
+	-moz-transform: scale(0) rotate(720deg);
+	-ms-transform: scale(0) rotate(720deg);
+	transform: scale(0) rotate(720deg);
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-4 ~ .twi-md-overlay,
+.twi-md-effect-4 .twi-md-content {
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.twi-md-show.twi-md-effect-4 .twi-md-content {
+	-webkit-transform: scale(1) rotate(0deg);
+	-moz-transform: scale(1) rotate(0deg);
+	-ms-transform: scale(1) rotate(0deg);
+	transform: scale(1) rotate(0deg);
+	opacity: 1;
+}
+
+/* Effect 5: fall */
+.twi-md-effect-5.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-5 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(600px) rotateX(20deg); 
+	-moz-transform: translateZ(600px) rotateX(20deg); 
+	-ms-transform: translateZ(600px) rotateX(20deg); 
+	transform: translateZ(600px) rotateX(20deg); 
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-5 .twi-md-content {
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transform: translateZ(0px) rotateX(0deg);
+	-moz-transform: translateZ(0px) rotateX(0deg);
+	-ms-transform: translateZ(0px) rotateX(0deg);
+	transform: translateZ(0px) rotateX(0deg); 
+	opacity: 1;
+}
+
+/* Effect 6: side fall */
+.twi-md-effect-6.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-6 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translate(30%) translateZ(600px) rotate(10deg); 
+	-moz-transform: translate(30%) translateZ(600px) rotate(10deg);
+	-ms-transform: translate(30%) translateZ(600px) rotate(10deg);
+	transform: translate(30%) translateZ(600px) rotate(10deg); 
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-6 .twi-md-content {
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transform: translate(0%) translateZ(0) rotate(0deg);
+	-moz-transform: translate(0%) translateZ(0) rotate(0deg);
+	-ms-transform: translate(0%) translateZ(0) rotate(0deg);
+	transform: translate(0%) translateZ(0) rotate(0deg);
+	opacity: 1;
+}
+
+/* Effect 7:  slide and stick to top */
+.twi-md-effect-7{
+	top: 0;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.twi-md-effect-7 .twi-md-content {
+	-webkit-transform: translateY(-200%);
+	-moz-transform: translateY(-200%);
+	-ms-transform: translateY(-200%);
+	transform: translateY(-200%);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-7 .twi-md-content {
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+	border-radius: 0 0 3px 3px;
+	opacity: 1;
+}
+
+/* Effect 8: 3D flip horizontal */
+.twi-md-effect-8.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-8 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateY(-70deg);
+	-moz-transform: rotateY(-70deg);
+	-ms-transform: rotateY(-70deg);
+	transform: rotateY(-70deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-8 .twi-md-content {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	opacity: 1;
+}
+
+/* Effect 9: 3D flip vertical */
+.twi-md-effect-9.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-9 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateX(-70deg);
+	-moz-transform: rotateX(-70deg);
+	-ms-transform: rotateX(-70deg);
+	transform: rotateX(-70deg);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-9 .twi-md-content {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	opacity: 1;
+}
+
+/* Effect 10: 3D sign */
+.twi-md-effect-10.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-10 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateX(-60deg);
+	-moz-transform: rotateX(-60deg);
+	-ms-transform: rotateX(-60deg);
+	transform: rotateX(-60deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.twi-md-show.twi-md-effect-10 .twi-md-content {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	-ms-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	opacity: 1;
+}
+
+/* Effect 11: Super scaled */
+.twi-md-effect-11 .twi-md-content {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
+	-ms-transform: scale(2);
+	transform: scale(2);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.twi-md-show.twi-md-effect-11 .twi-md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+/* Effect 12:  Just me */
+.twi-md-effect-12 .twi-md-content {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.twi-md-show.twi-md-effect-12 ~ .twi-md-overlay {
+	background: #e74c3c;
+} 
+
+.twi-md-effect-12 .twi-md-content h3,
+.twi-md-effect-12 .twi-md-content {
+	background: transparent;
+}
+
+.twi-md-show.twi-md-effect-12 .twi-md-content {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+/* Effect 13: 3D slit */
+.twi-md-effect-13.twi-md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}
+
+.twi-md-effect-13 .twi-md-content {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-3000px) rotateY(90deg);
+	-moz-transform: translateZ(-3000px) rotateY(90deg);
+	-ms-transform: translateZ(-3000px) rotateY(90deg);
+	transform: translateZ(-3000px) rotateY(90deg);
+	opacity: 0;
+}
+
+.twi-md-show.twi-md-effect-13 .twi-md-content {
+	-webkit-animation: slit .7s forwards ease-out;
+	-moz-animation: slit .7s forwards ease-out;
+	animation: slit .7s forwards ease-out;
+}
+#twiPicZoom
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -moz-user-select:none ;/*火狐禁止选择，IE: selectstart事件  return false;*/
+}
+#twiPicZoom_bg
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: Gray;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+#twiPicZoom_content
+{
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+}
+#twiPicZoom_content_top
+{
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    border:2px solid red;
+    /*IE 下如不加个完全透明的背景，获取不到twiPicZoom_content_top的焦点*/
+    background-color:Black;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+#twiPicZoom_close
+{
+    position: fixed;
+    z-index: 1002;
+    left:100%;
+    top: 0;
+    width:54px;
+    height:51px;
+    margin-left:-54px;
+    background:url(images/close_red.png) no-repeat;
+    cursor:pointer;    
+}
+
+#twiPicZoom_previous
+{
+    position: fixed;
+    z-index: 1002;
+    left:0;
+    top: 50%;
+    width:48px;
+    height:48px;
+    margin-top:-24px;
+    background:url(images/previous.png) no-repeat;
+    cursor:pointer;  
+}
+
+#twiPicZoom_next
+{
+    position: fixed;
+    z-index: 1002;
+    left:100%;
+    top: 50%;
+    width:48px;
+    height:48px;
+    margin-left:-48px;
+    margin-top:-48px;
+    background:url(images/next.png) no-repeat;
+    cursor:pointer;  
+}
+
+#twiTooltip
+{
+    position:absolute;
+    z-index: 900;
+    line-height: 16px;
+    font-size: 12px;
+    min-width: 60px;
+    max-width:200px;
+    min-height:20px;
+    border: 1px solid #D2D2D2;
+    border-radius: 6px;
+    float: left;
+    padding: 5px;
+    display:none;
+    background-color:White;
+    box-shadow: 0 0 9px 2px rgba(221, 221, 221, 0.75);
+}
+
+
+/**
+ * jQuery twiWindow plugin
+ * @Author：feitianxinhong http://feitianxinhong.com/ 
+ * @Version：1.0.4
+ * @CreateDate：2015-02-28
+ * @LastEditDate:2020-04-11
+ * @Example: Visit http://feitianxinhong.com/ 
+ * @Copyright ©2010-2015 Tyingsoft 踏影科技 之 Twilight/Twifly开源系列. 转载请保留本行注明.   
+ * @License：TwiUI Framework of Tyingsoft is licensed under the MIT license.  
+ * @Description：基于jquery+Bootstrap的窗体控件
+ * @Require: Bootstrap 3.0.0+
+ *
+ * ------------------------------------------------------------------
+ * 编号    版本号      作者              修改日期        修改内容
+ * ------------------------------------------------------------------
+ *  1      1.0.0       feitianxinhong    2015-02-28      创建文件
+ *  2      1.0.1       feitianxinhong    2015-03-12      z-index层显示问题
+ *  3      1.0.2       feitianxinhong    2016-01-28      修改样式，让其支持滚动条
+ *  4      1.0.3       feitianxinhong    2017-08-01      增加全屏模式
+ *  5      1.0.4       feitianxinhong    2020-04-11      支持窗口拖拽,最大化按钮从16px减小到14px
+ * ------------------------------------------------------------------
+ */
+
+
+/*覆盖Bootstrap使用：box-sizing: border-box;*/
+.twiWinContainer *{     
+    box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box;
+}
+.twiWinContainer .twiWinBg {
+    position: fixed;  /*1.0.2 从absolute改为fixed*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    opacity: 0.3;
+    z-index:9999;  /*1.0.1+*/
+}
+.twiWinContainer .twiWinFullScreen{
+    position:absolute;
+    top: 3px;
+    right: 28px;
+    color:#ccc;
+    font-size:14px;
+    cursor:default;
+}
+.twiWinContainer .twiWinFullScreen:hover {
+    color:#5cb85c;    
+    cursor:pointer;
+}
+.twiWinContainer .twiWinClose {
+    position:absolute;
+    top: 3px;
+    right: 5px;
+    color:#ccc;
+    font-size:18px;
+    cursor:default;
+}
+
+.twiWinContainer .twiWinClose:hover {
+    color:#d9534f;  
+    cursor:pointer;  
+}
+
+.twiWinContainer .twiWinContent {
+    position:fixed;  /*1.0.2 从absolute改为fixed*/
+    margin:0 auto;       
+    border: solid 4px #ccc;
+    width:300px;
+    height:230px;    
+    line-height:26px;       
+    padding:5px;
+    top:50%;
+    left:50%;
+    background-color:white;
+    margin-top:-115px;
+    margin-left:-150px;
+    z-index:99999;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.twiWinContainer .twiWinTitle {
+    font-size:20px;
+    line-height:1.8;
+    /*font-weight:bold;*/
+    padding-left:10px;
+    padding-bottom:5px;
+    border-bottom:1px solid #ccc;
+    margin-bottom:10px;
+}
+
+.twiWinContainer .twiWinBody {
+
+}
+
+.twiWinContainer .twiWinBbarClose {
+    width:60px;
+}
