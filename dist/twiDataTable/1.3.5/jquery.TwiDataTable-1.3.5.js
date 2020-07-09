@@ -5,7 +5,7 @@
  * @CreateDate：2014-10-25
  * @LastEditDate:2017-08-07
  * @Example: Visit http://feitianxinhong.com
- * @Copyright ©2010-2017 Tyingsoft 踏影软件开发工作室 之 Twilight/Twifly开源系列. 转载请保留本行注明.   
+ * @Copyright ©2010-2020 Tyingsoft 踏影 之 TwiUI开源系列. 转载请保留本行注明.  
  * @License：Twi Framework of Tyingsoft is licensed under the MIT license.  
  * @Description：基于jquery+Bootstrap的表格控件
  * @Require: bootstrap-3.2.0样式或以上 
